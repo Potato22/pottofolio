@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    max-width: 100%;
+    background: var(--baseD);
+}
+
+@font-face {
+    font-family: Syne;
+    src: url(../../font/Syne[wght].ttf) format("truetype-variations");
+    font-weight: 1 1000;
+}
+@font-face {
+    font-family: JetBrainsMono;
+    src: url(../../font/JetBrainsMono[wght].ttf) format("truetype-variations");
+    font-weight: 1 1000;
+}
+:root {
+    --baseD: rgb(24, 24, 24);
+    --baseL: rgb(252, 242, 233);
+    --alphabaseD: rgba(24, 24, 24, 0.7);
+    --alphabaseL: rgba(252, 242, 233, 0.7);
+    --basesecondaryD: rgb(44, 44, 44);
+    --basesecondaryL: rgb(199, 194, 189);
+    --textD: rgb(255, 255, 255);
+    --textL: rgb(19, 19, 19);
+    --textfL: rgb(19, 19, 19);
+    --texttD: rgb(255, 255, 255);
+    --textsecondaryD: rgba(202, 202, 202, .8);
+    --textsecondaryL: rgb(40, 40, 40);
+    --accentD: rgb(125, 201, 252);
+    --accentL: rgb(252, 193, 125);
+    --accentsecondaryD: rgb(191, 228, 255);
+    --accentsecondaryL: rgb(255, 220, 191);
+    --accentfillD: rgb(29, 31, 32);
+    --accentfillL: rgb(255, 252, 250);
+    --textaccentD: rgb(94, 186, 255);
+    --textaccentL: rgb(255, 167, 94);
+    --black: black;
+    --white: white;
+    
+    --display: Syne;
+    --content: Inter;
+    --contentsecondary: JetBrains Mono;
+}
+[data-theme="dark"] {
+    --baseD: var(--baseL);
+    --basesecondaryD: var(--basesecondaryL);
+    --textD: var(--textL);
+    --textsecondaryD: var(--textsecondaryL);
+    --accentD: var(--accentL);
+    --accentsecondaryD: var(--accentsecondaryL);
+    --accentfillD: var(--accentfillL);
+    --textaccentD: var(--textaccentL);
+    --black: var(--white);
+    --textfL: var(--texttD);
+}
+@font-face {
+    font-family: Syne;
+    src: url(../font/Syne[wght].ttf);
+}
+a,
+a:link,
+a:visited {
+    text-decoration: none !important;
+    color: initial !important;
+}
+.material-icons-outlined {
+    vertical-align: middle
+}
+.themetogglecont {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    align-items: flex-end;
+}
+.ttogle {
+    width: 30px;
+    height: 30px;
+    background: red;
+}
+
+.dynamicnav {
+    position: sticky;
+    top: 0;
+    background: var(--alphabaseD);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    z-index: 0;
+}
+@media screen and (max-width:1844px) {
+    .dynamicnav {
+        z-index: 1;
+        backdrop-filter: blur(12px);
+    }
+}
+.nlogo {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    background: var(--textD);
+}
+.npotto {
+    fill: var(--textfL);
+    fill-opacity: 1
+}
+.buttongroup {
+    position: relative;
+    display: flex;
+}
+.nbutton {
+    background: rgb(0,0,0,0);
+    color: var(--textD);
+    margin: 0 .5rem;
+    font-family: var(--contentsecondary);
+    transition: background .1s, color .2s;
+    font-weight: 100;
+    border-radius: 0 5px 0 0;
+    padding: .3rem;
+}
+.nbutton:hover {
+    background: var(--textD);
+    color: var(--textfL);
+    font-weight: 900;
+}
+.go {
+    padding: 10px 10px 10px 15px;
+    color: white;
+    box-sizing: border-box;
+    border: solid 1px var(--white);
+    display: flex;
+    font-size: 1.2em;
+    font-family: var(--content);
+    font-weight: 500;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    transition: all .15s;
+}
+
+
+.dynamicarrow {
+    stroke-width: 2px;
+    fill: none;
+    stroke: #fff;
+    width: 10px;
+    height: 10px;
+    margin-left: 7px;
+    transition: all .15s;
+}
+
+.line {
+    opacity: 0
+}
+.line,
+.arrow {
+    transition: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.go:hover {
+    transform: translateX(3px);
+    background: var(--accentD);
+    border: solid 1px rgba(255, 255, 255, 0);
+}
+.go:hover .dynamicarrow {
+    margin-left: 10px;
+}
+.go:hover .line {
+    opacity: 1;
+}
+.go:hover .arrow {
+    transform: translateX(3px)
+}
+.imgs {
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    user-select: none;
+}
+.imgs.leftoffset {
+    object-position: left;
+}
+.imgs.rightoffset {
+    object-position: right;
+}
+.imgs.topoffset {
+    object-position: top;
+}
+.imgs.bottomoffset {
+    object-position: bottom;
+}
