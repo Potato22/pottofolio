@@ -22,45 +22,17 @@
 
     <link rel="stylesheet" href="assets/css/global/root.css">
     <link rel="stylesheet" href="assets/css/index.css">
-    <script src="assets/js/navviewport.js"></script>
-    <script src="assets/js/videothemetoggle.js"></script>
-    <script src="assets/js/themetoggle.js"></script>
-    <script>
-        $(document).scroll(function () {
-            var scrollDistance = $(this).scrollTop();
-            if (scrollDistance >= 300) {
-                $('.videobanner').fadeOut();
-            } else {
-                $('.videobanner').fadeIn();
-            }
-        });
-        $('#tcheckbox').click(function() {
-        alert("Checkbox state (method 1) = " + $('#test').prop('checked'));
-        alert("Checkbox state (method 2) = " + $('#test').is(':checked'));
-        });
-        //please why won't you work this is LITERALLY A FUCKING TEST SCRIPT <<DIRECTLY>> ON THE HTML
-    </script>
-    <!-- <style>
-        :root {
-            --baseD: var(--baseL);
-            --basesecondaryD: var(--basesecondaryL);
-            --textD: var(--textL);
-            --textsecondaryD: var(--textsecondaryL);
-            --accentD: var(--accentL);
-            --accentsecondaryD: var(--accentsecondaryL);
-            --accentfillD: var(--accentfillL);
-            --textaccentD: var(--textaccentL);
-            --black: var(--white);
-            --textfL: var(--texttD);
-        }
-    </style> -->
+    <script src="assets/js/navviewport.js" defer></script>
+    <script src="assets/js/themetoggle.js" defer></script>
 </head>
 
 <body>
     <div class="themetogglecont">
         <div class="togglecont">
-                <input type="checkbox" id="tcheckbox" value=""/>
-                <div class="icon">T</div>
+            <div class="splash"></div>
+            <label class="checkboxtrig">
+                <input type="checkbox" id="ttogle" />
+                <div class="material-icons-outlined icon">light_mode</div>
         </div>
     </div>
     <div id="hello">
@@ -155,19 +127,19 @@
                 wait, why did I bother making a whole ass portfolio website when I only draw ponies n shit my whole life
                 <div class="quotation">- potto, probably</div>
             </div>
-            <div class="cards imgcard widecard">
-                <img class="imgs"
-                    src="https://cdn.discordapp.com/attachments/816710967936942090/828338040060903444/Screenshot_20210403-135721669_1.jpg">
-            </div>
             <div class="cards imgcard">
                 <img class="imgs"
-                    src="https://cdn.discordapp.com/attachments/816710967936942090/828338040060903444/Screenshot_20210403-135721669_1.jpg">
+                src="https://cdn.discordapp.com/attachments/816710967936942090/828338040060903444/Screenshot_20210403-135721669_1.jpg">
             </div>
-            <div class="cards textcard supershorttext"><u>mediocre by title</u></div>
             <div class="cards textcard widecard hypershorttext variable">
                 Potto,
                 <div class="quotation">As weird as a name can get, I mean come on. Who in their right minds would came up with this name?</div>
             </div>
+            <div class="cards imgcard widecard">
+                <img class="imgs"
+                    src="https://cdn.discordapp.com/attachments/816710967936942090/828338040060903444/Screenshot_20210403-135721669_1.jpg">
+            </div>
+            <div class="cards textcard supershorttext"><u>mediocre by title</u></div>
             <div class="cards backgroundtext bigcard">
                 <img class="imgs"
                     src="https://cdn.discordapp.com/attachments/816710967936942090/828338040060903444/Screenshot_20210403-135721669_1.jpg">
