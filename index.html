@@ -19,11 +19,22 @@
 
     <script src="assets/js/lib/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link rel="stylesheet" href="assets/css/global/root.css">
-    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/index-gallery.css">
     <script src="assets/js/navviewport.js" defer></script>
     <script src="assets/js/themetoggle.js" defer></script>
+    <script>
+        $(document).scroll(function () {
+            var scrollDistance = $(this).scrollTop();
+            if (scrollDistance >= 300) {
+                $('.videobanner').fadeOut();
+            } else {
+                $('.videobanner').fadeIn();
+            }
+        });
+    </script>
 </head>
 
 <body>
@@ -31,7 +42,7 @@
         <div class="togglecont">
             <div class="splash"></div>
             <label class="checkboxtrig">
-                <input type="checkbox" id="ttogle" />
+                <input type="checkbox" id="ttogle"/>
                 <div class="material-icons-outlined icon">light_mode</div>
         </div>
     </div>
@@ -40,14 +51,14 @@
             <div class="videodimmer"></div>
             <video class="videobanner" autoplay muted src="assets/video/pottogravitydark.webm"></video>
         </div>
-        <div class="hero" data-theme="light">
-            <div class="theactualhello">Hello,</div>
-            <div class="dialogue">Inconsistency is beautiful</div>
-            <div class="uh">..maybe, yknow what? who cares.</div>
+        <div class="hero">
+            <div class="theactualhello" data-aos="fade-right">Hello,</div>
+            <div class="dialogue" data-aos="fade-right" data-aos-delay="100">Inconsistency is beautiful</div>
+            <div class="uh" data-aos="fade-right" data-aos-delay="2300">..maybe, yknow what? who cares.</div>
         </div>
     </div>
     <div id="fader"></div>
-    <nav class="dynamicnav">
+    <nav class="dynamicnav navOff">
         <div class="nlogo">
             <svg viewBox="0 0 153.72 111.38">
                 <g transform="translate(-27.636,63.707)">
@@ -58,25 +69,25 @@
             </svg>
         </div>
         <div class="buttongroup">
-            <a href="gallery">
+            <a href="gallery.html">
                 <div class="nbutton mainpage gallery">gallery</div>
             </a>
-            <a href="info">
+            <a href="info.html">
                 <div class="nbutton mainpage info">info</div>
             </a>
-            <a href="contact">
+            <a href="contact.html">
                 <div class="nbutton mainpage contact">contact</div>
             </a>
         </div>
     </nav>
     <div class="mainbox">
         <div class="cardgrid">
-            <div class="cards textcard shorttext">I draw or something idk who cares.</div>
-            <div class="cards imgcard">
-                <img class="imgs"
-                    src="https://cdn.discordapp.com/attachments/816710967936942090/828338040060903444/Screenshot_20210403-135721669_1.jpg">
+            <div data-aos="zoom-in" class="cards textcard shorttext">I draw or something idk who cares.</div>
+            <div data-aos="zoom-in" class="cards imgcard">
+                <!--<img class="imgs"
+                    src="">-->
             </div>
-            <div class="cards thumbnailcard longcard">
+            <div data-aos="zoom-in" class="cards thumbnailcard longcard">
                 <div class="thumbnail thumb1"></div>
                 <div class="thumbnailtext">
                     <div class="textbox">Hey look, twitter.</div>
@@ -94,14 +105,14 @@
                     </div>
                 </div>
             </div>
-            <div class="cards textcard supershorttext">ayo what da dog doin</div>
-            <div class="cards backgroundtext bigcard">
-                <img class="imgs"
-                    src="https://cdn.discordapp.com/attachments/816710967936942090/828338040060903444/Screenshot_20210403-135721669_1.jpg">
+            <div data-aos="zoom-in" class="cards textcard supershorttext">ayo what da dog doin</div>
+            <div data-aos="zoom-in" class="cards backgroundtext bigcard">
+                <!--<img class="imgs"
+                    src="">-->
                 <div class="textcontainer">
                     <div class="imgtext">GALLERY or something 360 weed
                         <div class="buttonalign">
-                            <a href="">
+                            <a href="gallery.html">
                                 <div class="go">ok
                                     <svg class="dynamicarrow" viewBox="0 0 10 10">
                                         <g>
@@ -115,45 +126,50 @@
                     </div>
                 </div>
             </div>
-            <div class="cards backgroundtext longcard">
-                <img class="imgs"
-                    src="https://cdn.discordapp.com/attachments/816710967936942090/828338040060903444/Screenshot_20210403-135721669_1.jpg">
+            <div data-aos="zoom-in" class="cards backgroundtext longcard">
+                <!--<img class="imgs"
+                    src="">-->
                 <div class="textcontainer">
                     <div class="imgtext">I find it funny that I love my ass off about environment n shit yet I can't
                         draw them any good lmao</div>
                 </div>
             </div>
-            <div class="cards textcard longtext">
+            <div data-aos="zoom-in" class="cards textcard longtext">
                 wait, why did I bother making a whole ass portfolio website when I only draw ponies n shit my whole life
                 <div class="quotation">- potto, probably</div>
             </div>
-            <div class="cards imgcard">
+            <div data-aos="zoom-in" class="cards imgcard">
                 <img class="imgs"
-                src="https://cdn.discordapp.com/attachments/816710967936942090/828338040060903444/Screenshot_20210403-135721669_1.jpg">
+                src="">
             </div>
             <div class="cards textcard widecard hypershorttext variable">
                 Potto,
                 <div class="quotation">As weird as a name can get, I mean come on. Who in their right minds would came up with this name?</div>
             </div>
-            <div class="cards imgcard widecard">
-                <img class="imgs"
-                    src="https://cdn.discordapp.com/attachments/816710967936942090/828338040060903444/Screenshot_20210403-135721669_1.jpg">
+            <div data-aos="zoom-in" class="cards imgcard widecard">
+                <!--<img class="imgs"
+                    src="">-->
             </div>
-            <div class="cards textcard supershorttext"><u>mediocre by title</u></div>
-            <div class="cards backgroundtext bigcard">
-                <img class="imgs"
-                    src="https://cdn.discordapp.com/attachments/816710967936942090/828338040060903444/Screenshot_20210403-135721669_1.jpg">
+            <div data-aos="zoom-in" class="cards textcard supershorttext"><u>mediocre by title</u></div>
+            <div data-aos="zoom-in" class="cards backgroundtext bigcard">
+                <!--<img class="imgs"
+                    src="">-->
                 <div class="textcontainer">
                     <div class="imgtext"></div>
-                    <div class="cards textcard longtext">
+                    <div data-aos="zoom-in" class="cards textcard longtext">
                         okay this is actually by accident but I found out I can just put a card within a card without
                         breaking it lmao
                     </div>
                 </div>
             </div>
-            <div class="cards textcard supershorttext longcard">crape of fjkh;9285094</div>
+            <div data-aos="zoom-in" class="cards textcard supershorttext longcard">crape of fjkh;9285094</div>
         </div>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/lib/aosconfig.js" defer></script>
+    <script defer>
+      AOS.init();
+    </script>
 </body>
 
 </html>

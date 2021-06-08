@@ -5,7 +5,6 @@ body {
     outline: 0;
     max-width: 100%;
     background: var(--baseD);
-    transition: background 1s cubic-bezier(.03,.77,.34,1);
 }
 
 @font-face {
@@ -49,8 +48,9 @@ body {
     --content: Inter;
     --contentsecondary: JetBrains Mono;
 }
-[data-theme="dark"] {
+[data-theme="light"] {
     --baseD: var(--baseL);
+    --alphabaseD: var(--alphabaseL);
     --basesecondaryD: var(--basesecondaryL);
     --textD: var(--textL);
     --textsecondaryD: var(--textsecondaryL);
@@ -78,20 +78,23 @@ a:visited {
 }
 
 .dynamicnav {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1rem;
-    z-index: 0;
-    background: var(--baseD);
+    padding: 0 1rem 0 0;
+    z-index: 1;
+    background: var(--alphabaseD);
+    -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+    transition: all 1s cubic-bezier(.03,.77,.34,1);
+    height: 41px;
 }
-@media screen and (max-width:1844px) {
-    .dynamicnav {
-        z-index: 1;
-        backdrop-filter: blur(12px);
-    }
+.navOff {
+    background: var(--baseD);
+    transition: all .2s cubic-bezier(.03,.77,.34,1);
 }
 .nlogo {
     position: relative;
@@ -100,6 +103,7 @@ a:visited {
     display: grid;
     place-items: center;
     background: var(--textD);
+    border-radius: 0 0 10px 0;
 }
 .npotto {
     fill: var(--baseD);
@@ -126,9 +130,9 @@ a:visited {
 }
 .go {
     padding: 10px 10px 10px 15px;
-    color: white;
+    color: var(--textD);
     box-sizing: border-box;
-    border: solid 1px var(--white);
+    border: solid 1px var(--textD);;
     display: flex;
     font-size: 1.2em;
     font-family: var(--content);
@@ -143,7 +147,7 @@ a:visited {
 .dynamicarrow {
     stroke-width: 2px;
     fill: none;
-    stroke: #fff;
+    stroke: var(--textD);;
     width: 10px;
     height: 10px;
     margin-left: 7px;
@@ -173,24 +177,33 @@ a:visited {
 }
 .imgs {
     position: absolute;
-    object-fit: cover;
-    object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
     width: 100%;
     height: 100%;
     pointer-events: none;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 .imgs.leftoffset {
-    object-position: left;
+    -o-object-position: left;
+       object-position: left;
 }
 .imgs.rightoffset {
-    object-position: right;
+    -o-object-position: right;
+       object-position: right;
 }
 .imgs.topoffset {
-    object-position: top;
+    -o-object-position: top;
+       object-position: top;
 }
 .imgs.bottomoffset {
-    object-position: bottom;
+    -o-object-position: bottom;
+       object-position: bottom;
 }
 .themetogglecont {
     height: 100vh;
@@ -198,10 +211,13 @@ a:visited {
     z-index: 3;
     display: flex;
     align-items: flex-end;
-    
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 #ttogle {
-    opacity: 0;
+    display: none;
 }
 .togglecont {
     position: relative;
@@ -225,6 +241,8 @@ a:visited {
 .checkboxtrig {
     min-width: 30px;
     min-height: 30px;
+    display: grid;
+    place-items: center;
 }
 .splash {
     content: '';
@@ -238,13 +256,25 @@ a:visited {
     z-index: -1;
 }
 .splashanim {
-    animation: splash .8s cubic-bezier(.03,.77,.34,1);
+    -webkit-animation: splash .8s cubic-bezier(.03,.77,.34,1);
+            animation: splash .8s cubic-bezier(.03,.77,.34,1);
+}
+@-webkit-keyframes splash {
+    from {
+        transform: scale(0);
+        opacity: 1;
+        border-width: 2;
+    }
+    to {
+        transform: scale(1);
+        opacity: 0;
+        border-width: 1;
+    }
 }
 @keyframes splash {
     from {
         transform: scale(0);
         opacity: 1;
-        filter: blur(0);
         border-width: 2;
     }
     to {
@@ -256,5 +286,4 @@ a:visited {
 .icon {
     position: relative;
     color: var(--textfL);
-    transform: translateY(-9px)
 }

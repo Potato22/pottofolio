@@ -28,8 +28,12 @@
 }
 .hellovideo {
     position: absolute;
-    width: 100%;
+    z-index: -1;
     height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center
 }
 .videobanner {
     position: relative;
@@ -39,13 +43,29 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(rgba(24, 24, 24, 0) 60%, var(--black))
+    background: linear-gradient(rgba(24, 24, 24, 0) 60%, var(--baseD));
+}
+@media screen and (max-width: 740px)  {
+    #hello, #fader {
+        display: none;
+    }
 }
 .mainbox {
     background: var(--baseD);
     padding: 2rem 6rem;
     display: flex;
     justify-content: center;
+    transition: background 1s cubic-bezier(.03,.77,.34,1);
+}
+@media screen and (max-width: 800px)  {
+    .mainbox {
+        padding: 3rem;
+    }
+}
+@media screen and (max-width: 580px)  {
+    .mainbox {
+        padding: 0rem;
+    }
 }
 .cardgrid {
     display: grid;
@@ -64,7 +84,10 @@
     border-radius: 20px;
     word-wrap: break-word;
     overflow: hidden;
-    transition: all 1s cubic-bezier(.03,.77,.34,1);;
+    transition: all 1s cubic-bezier(.03,.77,.34,1);
+}
+.gimgs {
+    cursor: pointer;
 }
 .longcard {
     grid-row: span 2 / auto;
@@ -195,12 +218,6 @@
 }
 /*thumbnailcard---------------------------*/
 /*imgcard---------------------------------*/
-.imgcard {
-    background: var(--bgoverwrite), var(--accentD);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
 .imgcard:nth-child(1) {
     --thumbimg: url('https://cdn.discordapp.com/attachments/816710967936942090/823230607466561576/msedge_OtqNfmiE6e.png')
 }
@@ -212,4 +229,8 @@
 }
 .variable:hover {
     font-weight: 800;
+}
+.daImgs {
+    cursor: pointer;
+    pointer-events: all !important;
 }
