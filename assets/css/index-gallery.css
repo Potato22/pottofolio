@@ -77,6 +77,11 @@
     max-width: 80%;
     padding: 4rem 0;
 }
+/* @media screen and (max-width: 1000px) {
+    .cardgrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+} */
 .cards {
     position: relative;
     color: var(--textD);
@@ -115,8 +120,14 @@
     .longcard {
         grid-row: span 1 / auto;
     }
+    .extralongcard {
+        grid-column: span 1 / auto;
+    }
     .bigcard {
         grid-row: span 1 / auto;
+        grid-column: span 1 / auto;
+    }
+    .smallwidecard {
         grid-column: span 1 / auto;
     }
     .widecard {

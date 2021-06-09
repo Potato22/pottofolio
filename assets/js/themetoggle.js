@@ -8,9 +8,11 @@ if (currentTheme) {
     if (currentTheme === 'light') {
         toggleSwitch.checked = true;
         $(".icon").text("dark_mode")
+        $(".videobanner").attr("src", "assets/video/pottogravity.webm")
         console.log('applied "'+ currentTheme +'"')
     } else {
         $(".icon").text("light_mode")
+        $(".videobanner").attr("src", "assets/video/pottogravitydark.webm")
         console.log('applied "'+ currentTheme +'"')
     }
 }
