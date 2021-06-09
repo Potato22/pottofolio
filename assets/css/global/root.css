@@ -340,7 +340,9 @@ a:visited {
     height: 100vh;
     z-index: 1;
     display: grid;
-    place-items: center
+    place-items: center;
+    user-select: none;
+    pointer-events: none;
 }
 
 .loaderanim {
