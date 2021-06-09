@@ -75,6 +75,7 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-auto-rows: 300px;
     max-width: 80%;
+    padding: 4rem 0;
 }
 .cards {
     position: relative;
@@ -85,6 +86,7 @@
     word-wrap: break-word;
     overflow: hidden;
     transition: all 1s cubic-bezier(.03,.77,.34,1);
+    box-shadow: var(--boxshadowD);
 }
 .gimgs {
     cursor: pointer;
@@ -92,12 +94,17 @@
 .longcard {
     grid-row: span 2 / auto;
 }
+.extralongcard {
+    grid-row: span 3 / auto;
+}
 .bigcard {
     grid-row: span 2 / auto;
     grid-column: span 2 / auto;
 }
+.smallwidecard {
+    grid-column: span 2 / auto;
+}
 .widecard {
-    grid-row: span 1 / auto;
     grid-column: span 3 / auto;
 }
 .shortcard {
@@ -166,62 +173,43 @@
     max-width: 100%;
     height: 100%;
     max-height: 100%;
-    padding-left: 1rem;
     display: flex;
     align-items: flex-end;
+    padding: 0 1rem;
     background: linear-gradient(rgba(0, 0, 0, 0) 60%, var(--black));
 }
-.imgtext {
-    width: 100%;
+.textgroup {
+    min-width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
+    justify-content: space-between;   
     padding-bottom: 1rem;
-    padding-right: 1rem;
     font-family: var(--content);
     color: var(--textD);
 }
 /*backgroundtext--------------------------*/
 /*thumbnailcard---------------------------*/
-.thumbnailcard {
+.thumbtextcontainer {
     position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-.thumbnail {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
-    background: var(--thumbimg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.thumb1 {
-    --thumbimg: url('https://cdn.discordapp.com/attachments/816710967936942090/823230607466561576/msedge_OtqNfmiE6e.png')
-}
-.thumbnailtext {
-    height: 120px;
+    max-height: 100%;
     display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    color: var(--textD);
-    font-family: var(--content);
-}
-.buttonalign {
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
     align-items: flex-end;
 }
-/*thumbnailcard---------------------------*/
-/*imgcard---------------------------------*/
-.imgcard:nth-child(1) {
-    --thumbimg: url('https://cdn.discordapp.com/attachments/816710967936942090/823230607466561576/msedge_OtqNfmiE6e.png')
+.thumbtextgroup {
+    max-width: 100%;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;   
+    padding: 1rem;
+    font-family: var(--content);
+    color: var(--textD);
+    background: var(--basesecondaryD);
 }
-/*imgcard---------------------------------*/
+/*thumbnailcard---------------------------*/
 /*customs---------------------------------*/
 .variable {
     font-weight: 700;
@@ -232,5 +220,24 @@
 }
 .daImgs {
     cursor: pointer;
-    pointer-events: all !important;
+}
+.cards.daImgs {
+    transition: all 1s cubic-bezier(.03,.77,.34,1) !important;
+}
+.cards.daImgs:hover {
+    transform: scale(1.05) !important;
+}
+.inlineattribute {
+    color: var(--accentD) !important;
+    margin: none;
+    padding: none;
+    background: black;
+    border-radius: 10px;
+    padding: .05rem .5rem
+}
+.buttonalign {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }

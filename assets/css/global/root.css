@@ -4,22 +4,30 @@ body {
     border: 0;
     outline: 0;
     max-width: 100%;
-    background: var(--baseD);
+    background: var(--baseD)
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(../../font/Inter.var.woff2) format("truetype-variations");
+    font-weight: 1 1000
 }
 
 @font-face {
     font-family: Syne;
     src: url(../../font/Syne[wght].ttf) format("truetype-variations");
-    font-weight: 1 1000;
+    font-weight: 1 1000
 }
+
 @font-face {
     font-family: JetBrainsMono;
     src: url(../../font/JetBrainsMono[wght].ttf) format("truetype-variations");
-    font-weight: 1 1000;
+    font-weight: 1 1000
 }
+
 :root {
-    --baseD: rgb(24, 24, 24);
-    --baseL: rgb(252, 242, 233);
+    --baseD: rgba(24, 24, 24, 1);
+    --baseL: rgba(252, 242, 233, 1);
     --alphabaseD: rgba(24, 24, 24, 0.7);
     --alphabaseL: rgba(252, 242, 233, 0.7);
     --basesecondaryD: rgb(44, 44, 44);
@@ -28,7 +36,7 @@ body {
     --textL: rgb(19, 19, 19);
     --textsecondaryD: rgba(202, 202, 202, .8);
     --textsecondaryL: rgb(40, 40, 40);
-    --accentD: rgb(125, 201, 252);
+    --accentD: rgb(90, 171, 224);
     --accentL: rgb(252, 193, 125);
     --accentsecondaryD: rgb(191, 228, 255);
     --accentsecondaryL: rgb(255, 220, 191);
@@ -38,17 +46,20 @@ body {
     --textaccentL: rgb(255, 167, 94);
     --black: black;
     --white: white;
-    
     --textfL: rgb(19, 19, 19);
     --texttD: rgb(255, 255, 255);
     --basefL: rgb(252, 242, 233);
     --basetD: rgb(24, 24, 24);
-
+    --boxshadowD: rgba(0, 0, 0, 0) 0 0 0px;
+    --boxshadowL: rgba(0, 0, 0, .25) 0 2px 12px;
+    --loaderD: url('../../img/local/spinnerD.gif');
+    --loaderL: url('../../img/local/spinnerL.gif');
     --display: Syne;
     --content: Inter;
-    --contentsecondary: JetBrains Mono;
+    --contentsecondary: JetBrains Mono
 }
-[data-theme="light"] {
+
+[data-theme=light] {
     --baseD: var(--baseL);
     --alphabaseD: var(--alphabaseL);
     --basesecondaryD: var(--basesecondaryL);
@@ -59,20 +70,19 @@ body {
     --accentfillD: var(--accentfillL);
     --textaccentD: var(--textaccentL);
     --black: var(--white);
-
     --textfL: var(--texttD);
     --basefL: var(--basetD);
+    --boxshadowD: var(--boxshadowL);
+    --loaderD: var(--loaderL)
 }
-@font-face {
-    font-family: Syne;
-    src: url(../font/Syne[wght].ttf);
-}
+
 a,
 a:link,
 a:visited {
     text-decoration: none !important;
-    color: initial !important;
+    color: initial
 }
+
 .material-icons-outlined {
     vertical-align: middle
 }
@@ -88,14 +98,23 @@ a:visited {
     z-index: 1;
     background: var(--alphabaseD);
     -webkit-backdrop-filter: blur(6px);
-            backdrop-filter: blur(6px);
-    transition: all 1s cubic-bezier(.03,.77,.34,1);
-    height: 41px;
+    backdrop-filter: blur(6px);
+    transition: background 1s cubic-bezier(.03, .77, .34, 1);
+    height: 40px
 }
+
 .navOff {
     background: var(--baseD);
-    transition: all .2s cubic-bezier(.03,.77,.34,1);
+    transition: all .2s cubic-bezier(.03, .77, .34, 1)
 }
+
+.navAlpha {
+    background: rgba(0, 0, 0, 0);
+    transition: all .2s cubic-bezier(.03, .77, .34, 1);
+    -webkit-backdrop-filter: blur(0);
+    backdrop-filter: blur(0)
+}
+
 .nlogo {
     position: relative;
     width: 40px;
@@ -103,36 +122,41 @@ a:visited {
     display: grid;
     place-items: center;
     background: var(--textD);
-    border-radius: 0 0 10px 0;
+    border-radius: 0 0 10px 0
 }
+
 .npotto {
     fill: var(--baseD);
     fill-opacity: 1
 }
+
 .buttongroup {
     position: relative;
-    display: flex;
+    display: flex
 }
+
 .nbutton {
-    background: rgb(0,0,0,0);
+    background: rgb(0, 0, 0, 0);
     color: var(--textD);
     margin: 0 .5rem;
     font-family: var(--contentsecondary);
     transition: background .1s, color .2s;
     font-weight: 100;
     border-radius: 0 5px 0 0;
-    padding: .3rem;
+    padding: .3rem
 }
+
 .nbutton:hover {
     background: var(--textD);
     color: var(--textfL);
-    font-weight: 900;
+    font-weight: 900
 }
+
 .go {
     padding: 10px 10px 10px 15px;
     color: var(--textD);
     box-sizing: border-box;
-    border: solid 1px var(--textD);;
+    border: solid 1px var(--textD);
     display: flex;
     font-size: 1.2em;
     font-family: var(--content);
@@ -140,71 +164,80 @@ a:visited {
     border-radius: 40px;
     display: flex;
     align-items: center;
-    transition: all .15s;
+    transition: all .15s
 }
-
 
 .dynamicarrow {
     stroke-width: 2px;
     fill: none;
-    stroke: var(--textD);;
+    stroke: var(--textD);
     width: 10px;
     height: 10px;
     margin-left: 7px;
-    transition: all .15s;
+    transition: all .15s
 }
 
 .line {
     opacity: 0
 }
-.line,
-.arrow {
-    transition: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+
+.arrow,
+.line {
+    transition: 150ms cubic-bezier(.215, .61, .355, 1)
 }
 
 .go:hover {
     background: var(--accentD);
-    border: solid 1px rgba(255, 255, 255, 0);
+    border: solid 1px rgba(255, 255, 255, 0)
 }
+
 .go:hover .dynamicarrow {
-    margin-left: 10px;
+    margin-left: 10px
 }
+
 .go:hover .line {
-    opacity: 1;
+    opacity: 1
 }
+
 .go:hover .arrow {
     transform: translateX(3px)
 }
+
 .imgs {
     position: absolute;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     -o-object-position: center;
-       object-position: center;
+    object-position: center;
     width: 100%;
     height: 100%;
     pointer-events: none;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
 }
+
 .imgs.leftoffset {
     -o-object-position: left;
-       object-position: left;
+    object-position: left
 }
+
 .imgs.rightoffset {
     -o-object-position: right;
-       object-position: right;
+    object-position: right
 }
+
 .imgs.topoffset {
     -o-object-position: top;
-       object-position: top;
+    object-position: top
 }
+
 .imgs.bottomoffset {
     -o-object-position: bottom;
-       object-position: bottom;
+    object-position: bottom
 }
+
 .themetogglecont {
     height: 100vh;
     position: fixed;
@@ -212,13 +245,15 @@ a:visited {
     display: flex;
     align-items: flex-end;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
 }
+
 #ttogle {
-    display: none;
+    display: none
 }
+
 .togglecont {
     position: relative;
     background: var(--basefL);
@@ -228,22 +263,26 @@ a:visited {
     display: grid;
     place-items: center;
     transform-origin: bottom left;
-    transition: all .2s cubic-bezier(.57,.07,.41,1.95);
+    transition: all .2s cubic-bezier(.57, .07, .41, 1.95)
 }
+
 .togglecont:hover {
     transform: scale(1.1);
-    border-radius: 0 10px 0 0;
+    border-radius: 0 10px 0 0
 }
+
 .togglecont:active {
     transform: scale(1.3);
-    border-radius: 0 5px 0 0;
+    border-radius: 0 5px 0 0
 }
+
 .checkboxtrig {
     min-width: 30px;
     min-height: 30px;
     display: grid;
-    place-items: center;
+    place-items: center
 }
+
 .splash {
     content: '';
     position: absolute;
@@ -253,37 +292,62 @@ a:visited {
     transform: scale(0);
     border-radius: 50%;
     border: solid 2px var(--basefL);
-    z-index: -1;
+    z-index: -1
 }
+
 .splashanim {
-    -webkit-animation: splash .8s cubic-bezier(.03,.77,.34,1);
-            animation: splash .8s cubic-bezier(.03,.77,.34,1);
+    -webkit-animation: splash .8s cubic-bezier(.03, .77, .34, 1);
+    animation: splash .8s cubic-bezier(.03, .77, .34, 1)
 }
+
 @-webkit-keyframes splash {
     from {
         transform: scale(0);
         opacity: 1;
-        border-width: 2;
+        border-width: 2
     }
+
     to {
         transform: scale(1);
         opacity: 0;
-        border-width: 1;
+        border-width: 1
     }
 }
+
 @keyframes splash {
     from {
         transform: scale(0);
         opacity: 1;
-        border-width: 2;
+        border-width: 2
     }
+
     to {
         transform: scale(1);
         opacity: 0;
-        border-width: 1;
+        border-width: 1
     }
 }
+
 .icon {
     position: relative;
-    color: var(--textfL);
+    color: var(--textfL)
+}
+
+.loader {
+    position: fixed;
+    background: var(--baseD);
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    display: grid;
+    place-items: center
+}
+
+.loaderanim {
+    background: var(--loaderD);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 50px
 }
