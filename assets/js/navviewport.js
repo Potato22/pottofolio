@@ -5,10 +5,10 @@ $(document).ready(function() {
 
     $win.on("scroll", function () {
         if ($(this).scrollTop() > winH ) {
-            console.log('navOff')
+            //console.log('navOff')
             $('.dynamicnav').removeClass('navOff');
         } else {
-            console.log('navOn')
+            //console.log('navOn')
             $('.dynamicnav').addClass('navOff');
         }
     }).on("resize", function(){ // If the user resizes the window

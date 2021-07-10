@@ -55,7 +55,7 @@
     padding: 2rem 6rem;
     display: flex;
     justify-content: center;
-    transition: background 1s cubic-bezier(.03,.77,.34,1);
+    transition: background 1s var(--sleek);;
 }
 @media screen and (max-width: 800px)  {
     .mainbox {
@@ -90,7 +90,7 @@
     border-radius: 20px;
     word-wrap: break-word;
     overflow: hidden;
-    transition: all 1s cubic-bezier(.03,.77,.34,1);
+    transition: all 1s var(--sleek);;
     box-shadow: var(--boxshadowD);
 }
 .gimgs {
@@ -224,7 +224,7 @@
 /*customs---------------------------------*/
 .variable {
     font-weight: 700;
-    transition: all 1s cubic-bezier(.03,.77,.34,1);
+    transition: all 1s var(--sleek);;
 }
 .variable:hover {
     font-weight: 800;
@@ -233,18 +233,18 @@
     cursor: pointer;
 }
 .cards.daImgs {
-    transition: all 1s cubic-bezier(.03,.77,.34,1) !important;
+    transition: all 1s var(--sleek) !important;
 }
 .cards.daImgs:hover {
     transform: scale(1.05) !important;
 }
 .inlineattribute {
     color: var(--accentD) !important;
-    margin: none;
-    padding: none;
-    background: black;
+    margin: -.3em;
+    background: var(--blackfL);
     border-radius: 10px;
-    padding: .05rem .5rem
+    padding: .05rem .3rem;
+    vertical-align: middle;
 }
 .buttonalign {
     height: 100%;
