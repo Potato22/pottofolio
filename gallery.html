@@ -28,6 +28,9 @@
 </head>
 
 <body>
+    <!-- orb cursor -->
+    <div class="orbcursor"></div>
+    <!-- theme toggle -->
     <div class="themetogglecont">
         <div class="togglecont">
             <div class="splash"></div>
@@ -36,6 +39,7 @@
                 <div class="material-icons-outlined icon">light_mode</div>
         </div>
     </div>
+    
     <!--IMGZOOMIN-->
     <div class="zoomindimmer"></div>
     <div class="zoomin">
@@ -57,9 +61,6 @@
             <a href="index.html">
                 <div class="nbutton mainpage gallery">home</div>
             </a>
-            <a href="info">
-                <div class="nbutton mainpage info">info</div>
-            </a>
             <a href="contact">
                 <div class="nbutton mainpage contact">contact</div>
             </a>
@@ -68,6 +69,11 @@
         <!-- loader -->
         <div class="loader"><div class="loaderanim"></div></div>
     <div class="mainbox">
+        <div class="cardgrid">
+            <div class="cards invis textcard titlecard huge">
+                Illustration Work
+            </div>
+        </div>
         <div class="cardgrid" id="daImg">
             <!--script injects here-->
         </div>
@@ -88,6 +94,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="assets/js/lib/aosconfig.js" defer></script>
     <script src="assets/js/zoomtrigger.js"></script>
+    <script src="assets/js/orb.js"></script>
     <script defer>
       AOS.init();
     </script>

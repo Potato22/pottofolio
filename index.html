@@ -6,11 +6,13 @@
     <meta name="theme-color" content="rgb(125, 201, 252)">
     <meta name="description" content="As weird as a name can get.">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/Potato22/pottofolio/main/assets/img/local/potto3d.png">
+    <meta name="twitter:image"
+        content="https://raw.githubusercontent.com/Potato22/pottofolio/main/assets/img/local/potto3d.png">
     <meta name="twitter:title" content="Potto">
     <meta name="twitter:description" content="As weird as a name can get.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://raw.githubusercontent.com/Potato22/pottofolio/main/assets/img/local/potto3d.png">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/Potato22/pottofolio/main/assets/img/local/potto3d.png">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,13 +27,21 @@
     <link rel="stylesheet" href="assets/css/index-gallery.css">
     <script src="assets/js/navviewport.js" defer></script>
     <script src="assets/js/themetoggle.js" defer></script>
+    <script src="assets/js/orb.js" defer></script>
+
     <script>
         $(document).scroll(function () {
             var scrollDistance = $(this).scrollTop();
             if (scrollDistance >= 300) {
-                $('.videobanner').fadeOut();
+                $('.heroimage, .forwardwrap').fadeOut();
+                $('.themetogglecont').css({
+                    'opacity': '1'
+                });
             } else {
-                $('.videobanner').fadeIn();
+                $('.heroimage, .forwardwrap').fadeIn();
+                $('.themetogglecont').css({
+                    'opacity': '0'
+                });
             }
         });
     </script>
@@ -44,6 +54,7 @@
     </div>
     <!-- orb cursor -->
     <div class="orbcursor"></div>
+    <!-- theme toggle -->
     <div class="themetogglecont">
         <div class="togglecont">
             <div class="splash"></div>
@@ -53,16 +64,32 @@
         </div>
     </div>
     <div id="hello">
-        <div class="hellovideo">
-            <div class="videodimmer"></div>
-            <video class="videobanner" autoplay muted src="assets/video/pottogravitydark.webm"></video>
+        <div class="heroimage">
+            <div style="background-image:url(assets/img/content/cityscape.png)"></div>
+            <div style="background-image:url(assets/img/content/clock.png)"></div>
+            <div class="offsetbuttom" style="background-image:url(assets/img/content/lighting.png)"></div>
+            <div style="background-image:url(assets/img/content/log.png)"></div>
+            <div style="background-image:url(assets/img/content/snow.png)"></div>
         </div>
         <div class="hero">
-            <div class="theactualhello" data-aos="fade-right">Hello,</div>
-            <div class="dialogue" data-aos="fade-right" data-aos-delay="100">Inconsistency is beautiful</div>
-            <div class="uh" data-aos="fade-right" data-aos-delay="2300">sometimes.</div>
+            <div class="theactualhello" data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right">Pottofolio
+            </div>
+            <div class="dialogue" data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right"
+                data-aos-delay="100">I'm Potto,</div>
+            <div class="uh" data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right" data-aos-delay="200">a
+                fellow creative-developer for your service.</div>
         </div>
     </div>
+    <!-- forward -->
+    <a class="forwardattrwrap" href="#about">
+        <div class="forwardwrap">
+            <div class="forward">
+                <div class="capsule">
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+    </a>
     <div id="fader"></div>
     <nav class="dynamicnav navOff">
         <div class="nlogo">
@@ -75,59 +102,84 @@
             </svg>
         </div>
         <div class="buttongroup">
-            <a href="gallery.html">
+            <a href="#about">
+                <div class="nbutton mainpage about">about</div>
+            </a>
+            <a href="#illustration">
                 <div class="nbutton mainpage gallery">gallery</div>
             </a>
-            <a href="info.html">
-                <div class="nbutton mainpage info">info</div>
-            </a>
-            <a href="contact.html">
+            <a href="#contact">
                 <div class="nbutton mainpage contact">contact</div>
             </a>
         </div>
     </nav>
     <div class="mainbox">
+        <!-- CARDGRID -->
+        <div id="about"></div>
         <div class="cardgrid">
-            <div class="cards textcard widecard hypershorttext variable">
-                Potto,
-                <div class="quotation">As weird as a name can get.</div>
+            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
+                class="cards imgcard dynamic-long-mediumwide">
+                <img class="imgs" src="assets/img/content/imgweb.png">
             </div>
-            <div data-aos="zoom-in" class="cards textcard supershorttext"><u>mediocre by title</u></div>
-            <div data-aos="zoom-in" class="cards imgcard">
-                <img class="imgs" src="assets/img/content/img4.png">
+            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right"
+                class="cards invis textcard mediumwidecard longtext">
+                <div class="titletextcard">ILLUSRATION,</div>
+                <div class="titletextcard">MOTION GRAPHICS,</div>
+                <div class="titletextcard">FRONT-END WEB,</div>
+                <div class="longtext">you call it, I got your back.</div>
             </div>
-            <div data-aos="zoom-in" class="cards textcard supershorttext">I draw, things.</div>
-            <div data-aos="zoom-in"
-                class="cards https://raw.githubusercontent.com/Potato22/pottofolio/main/assets/img/local/potto3d.pngcard smallwidecard">
-                <img class="imgs" src="assets/img/content/img14.png">
-                <div class="thumbtextcontainer">
-                    <div class="thumbtextgroup">
-                        <div class="imgtext">Look over to my twitter
-                        </div>
-                        <div class="buttonalign">
-                            <a target="_blank" href="https://twitter.com/Potto2292">
-                                <div class="go">cool
-                                    <svg class="dynamicarrow" viewBox="0 0 10 10">
-                                        <g>
-                                            <path class="line" d="M0 5h7"></path>
-                                            <path class="arrow" d="M1 1l4 4-4 4"></path>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-left"
+                class="cards textcard invis longtextread">
+                I'm a self-taught creative-developer based of Indonesia with 4 years of experience in my skills. I
+                mostly work
+                remotely and have a unique experience online clients.
+            </div>
+            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-left"
+                class="cards textcard mediumwidecard invis big">
+                <u>I'm looking forward for new adventures, experience, and relationships with any clients,</u>
+            </div>
+            <a href="#contact" class="cards linkcard" data-aos-duration="500" data-aos-easing="sleek"
+                data-aos="fade-right">
+                <div style="color: var(--textD);" class="textcard invis bigger col">
+                    <b>Say Hello!</b>
+                    <svg class="customarrow" viewBox="0 0 10 10">
+                        <g>
+                            <path class="line" d="M0 5h7"></path>
+                            <path class="arrow" d="M1 1l4 4-4 4"></path>
+                        </g>
+                    </svg>
                 </div>
+            </a>
+            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards imgcard widecard">
+                <img class="imgs" src="assets/img/content/snow.png">
             </div>
-            <div data-aos="zoom-in" class="cards backgroundtext bigcard">
-                <img class="imgs" src="assets/img/content/img1.png">
+        </div>
+        <!-- CARDGRID -->
+        <div id="illustration"></div>
+        <div class="cardgrid">
+            <div class="cards invis textcard widecard">
+                <del>Less talk,</del><br>
+                <div class="titletextcard">More creations!</div>
+                <div class="subquote">::Illustration works</div>
+            </div>
+            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards imgcard">
+                <img class="imgs" src="assets/img/content/log.png">
+            </div>
+
+            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
+                class="cards imgcard dynamic-long-mediumwide">
+                <img class="imgs bottomoffset" src="assets/img/content/lighting.png">
+            </div>
+            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
+                class="cards backgroundtext bigcard">
+                <img class="imgs" src="assets/img/content/snow.png">
                 <div class="textcontainer">
                     <div class="textgroup">
-                        <div class="imgtext">Take a look over to my galerry
+                        <div class="imgtext">Look more into my Illustration gallery
                         </div>
                         <div class="buttonalign">
                             <a href="gallery.html">
-                                <div class="go">ok
+                                <div class="go">Explore
                                     <svg class="dynamicarrow" viewBox="0 0 10 10">
                                         <g>
                                             <path class="line" d="M0 5h7"></path>
@@ -140,29 +192,35 @@
                     </div>
                 </div>
             </div>
-            <div data-aos="zoom-in" class="cards backgroundtext longcard">
-                <img class="imgs" src="assets/img/content/img7.png">
+
+            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards imgcard">
+                <img class="imgs" src="assets/img/content/dance.png">
+            </div>
+            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards imgcard">
+                <img class="imgs" src="assets/img/content/verticalscape.png">
+            </div>
+            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
+                class="cards mediumwidecard widecard">
+                <img class="imgs" src="assets/img/content/clock.png">
+            </div>
+            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
+                class="cards backgroundtext bigcard">
+                <img class="imgs leftoffset" src="assets/img/content/cityscape.png">
                 <div class="textcontainer">
                     <div class="textgroup">
-                        <div class="imgtext">I'm a fan of working with backgrounds and environment.</div>
+                        <div data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right"
+                            class="cards invis textcard longtext">
+                            Capture the mood.
+                        </div>
                     </div>
                 </div>
             </div>
-            <div data-aos="zoom-in" class="cards textcard supershorttext">oh fuck wrong layer</div>
-            <div data-aos="zoom-in" class="cards imgcard">
-                <img class="imgs" src="assets/img/content/img3.png">
+            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards textcard big">
+                Capable of capturing your vision into reality
             </div>
-            <div data-aos="zoom-in" class="cards textcard longtext">
-                I like doing designs, as seen on this website. I've wrote many webpages before, it's quite a learning experience. I'm still looking forward to keep going.
-                <div class="quotation"> - potto, probably.</div>
-            </div>
-            <div data-aos="zoom-in" class="cards imgcard widecard">
-                <img class="imgs" src="assets/img/content/img9.png">
-            </div>
-            <div data-aos="zoom-in" class="cards imgcard widecard">
-                <img class="imgs" src="assets/img/content/img5.png">
-            </div>
-            <div data-aos="zoom-in" class="cards backgroundtext longcard">
+
+
+            <!-- <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext longcard">
                 <img class="imgs" src="assets/img/content/img8.png">
                 <div class="textcontainer">
                     <div class="textgroup">
@@ -171,80 +229,44 @@
                             homies. Check it out</div>
                     </div>
                 </div>
-            </div>
-            <div data-aos="zoom-in" class="cards backgroundtext bigcard">
-                <img class="imgs leftoffset" src="assets/img/content/img2.png">
-                <div class="textcontainer">
-                    <div class="textgroup">
-                        <div data-aos="zoom-in" class="cards textcard longtext">
-                            Hehe butt.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div data-aos="zoom-in" class="cards textcard supershorttext longcard">Mastery of.. uh, Procrastination.
-            </div>
-            <div data-aos="zoom-in" class="cards textcard">
-                Started Creating things since 2017,
-                <div class="quotation"> nowhere an expert. Neither competent.</div>
-            </div>
-            <div data-aos="zoom-in" class="cards textcard longtext">
-                When I say creating things I meant <i>photoshopping</i> things together for absolutely no reaon.
-                <div class="quotation">What? I can't just ask my 13 year old me why.</div>
-            </div>
-            <div data-aos="zoom-in" class="cards imgcard bigcard">
-                <img class="imgs" src="assets/img/content/img11.png">
-            </div>
-            <div data-aos="zoom-in" class="cards imgcard longcard">
-                <img class="imgs" src="assets/img/content/img12.png">
-            </div>
-            <div data-aos="zoom-in" class="cards textcard longtext">
-                Not long after, and hey look I do vector. Whilst 'attempting' to make a photorealistic look.
-                <div class="quotation">on a processor that is A DECADE OLD with 4 FRAMES PER SECOND VECTORING
-                    EXPERIENCE.</div>
-            </div>
-            <div data-aos="zoom-in" class="cards imgcard">
-                <img class="imgs rightoffset" src="assets/img/content/img6.png">
-            </div>
-            <div data-aos="zoom-in" class="cards textcard widecard shorttext">
-                You wouldn't believe me, but I actually used to make music
-                <div class="quotation">but who fucking cares, not even a single melody idea ever came through my head so
-                    I just quit lmao. They all sound mediocre anyway xdDrf@gh239</div>
-            </div>
-            <div data-aos="zoom-in" class="cards backgroundtext smallwidecard">
-                <img class="imgs" src="assets/img/content/img13.png">
-                <div class="textcontainer">
-                    <div class="textgroup">
-                        <div class="imgtext">The mediocre songs I was mentioning
-                        </div>
-                        <div class="buttonalign">
-                            <a target="_blank" href="https://soundcloud.com/potato22musics/tracks">
-                                <div class="go">sure
-                                    <svg class="dynamicarrow" viewBox="0 0 10 10">
-                                        <g>
-                                            <path class="line" d="M0 5h7"></path>
-                                            <path class="arrow" d="M1 1l4 4-4 4"></path>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </div> -->
         </div>
-    </div>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="assets/js/lib/aosconfig.js" defer></script>
-    <script src="assets/js/orb.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(".loader").fadeOut('fast');
-        })
-    </script>
-    <script defer>
-        AOS.init();
-    </script>
+        <!-- CARDGRID -->
+        <div id="anim"></div>
+        <div class="cardgrid">
+            <div class="cards invis textcard widecard">
+                <div class="titletextcard">Groovy Animation</div>
+                <div class="subquote">::Animation works</div>
+            </div>
+            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards textcard superbig">PLACE HOLDER</div>
+        </div>
+        <!-- CARDGRID -->
+        <div id="anim"></div>
+        <div class="cardgrid">
+            <div class="cards invis textcard widecard">
+                <div class="titletextcard">Nerd stuff</div>
+                <div class="subquote">::Front-end web designs</div>
+            </div>
+            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards textcard superbig">PLACE HOLDER</div>
+        </div>
+        <!-- CONTACT -->
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="assets/js/lib/aosconfig.js" defer></script>
+        <script src="assets/js/lib/smooth-scroll.js"></script>
+        <script>
+            var scroll = new SmoothScroll('a[href*="#"]', {
+                speed: 1000,
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $(".loader").fadeOut('fast');
+            })
+        </script>
+        <script defer>
+            AOS.init();
+        </script>
 </body>
 
 </html>

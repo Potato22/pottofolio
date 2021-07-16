@@ -1,0 +1,25 @@
+{
+  "name": "pottofolio",
+  "version": "0.81.1",
+  "description": "Portfolio Page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Potato22/Pottofolio.git"
+  },
+  "author": "Potto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Potato22/Pottofolio/issues"
+  },
+  "homepage": "https://github.com/Potato22/Pottofolio#readme",
+  "devDependencies": {
+    "sass": "^1.35.2"
+  },
+  "dependencies": {
+    "smooth-scroll": "^16.1.3"
+  }
+}
