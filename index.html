@@ -90,6 +90,30 @@
             </div>
         </div>
     </a>
+    <!-- creationdialog -->
+    <div class="dimmer">
+        <div class="creationdialog">
+            <div class="exit">
+                <div class="xcont">
+                    <div class="x"></div>
+                </div>
+            </div>
+            <div class="cbuttongroup">
+                <a href="#illus">
+                    <div class="illus cbutton block s2-1">ILLUSRATION
+                    </div>
+                </a>
+                <a href="#anim">
+                    <div class="anim cbutton block s2-2">ANIMATION
+                    </div>
+                </a>
+                <a href="#web">
+                    <div class="web cbutton block s2-3">WEB
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
     <div id="fader"></div>
     <nav class="dynamicnav navOff">
         <div class="nlogo">
@@ -103,19 +127,25 @@
         </div>
         <div class="buttongroup">
             <a href="#about">
-                <div class="nbutton mainpage about">about</div>
+                <div class="nbutton about">about
+                    <span class="strikethrough s1"></span>
+                </div>
             </a>
-            <a href="#illustration">
-                <div class="nbutton mainpage gallery">gallery</div>
+            <a href="#c">
+                <div class="nbutton creation">creations
+                    <span class="strikethrough s2"></span>
+                </div>
             </a>
             <a href="#contact">
-                <div class="nbutton mainpage contact">contact</div>
+                <div class="nbutton contact">contact
+                    <span class="strikethrough s3"></span>
+                </div>
             </a>
         </div>
     </nav>
     <div class="mainbox">
         <!-- CARDGRID -->
-        <div id="about"></div>
+        <div id="about" class="anchor"></div>
         <div class="cardgrid">
             <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
                 class="cards imgcard dynamic-long-mediumwide">
@@ -155,7 +185,8 @@
             </div>
         </div>
         <!-- CARDGRID -->
-        <div id="illustration"></div>
+        <div id="create"></div>
+        <div id="illus"></div>
         <div class="cardgrid">
             <div class="cards invis textcard widecard">
                 <del>Less talk,</del><br>
@@ -238,25 +269,31 @@
                 <div class="titletextcard">Groovy Animation</div>
                 <div class="subquote">::Animation works</div>
             </div>
-            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards textcard superbig">PLACE HOLDER</div>
+            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards textcard superbig">
+                PLACE HOLDER</div>
         </div>
         <!-- CARDGRID -->
-        <div id="anim"></div>
+        <div id="web"></div>
         <div class="cardgrid">
             <div class="cards invis textcard widecard">
                 <div class="titletextcard">Nerd stuff</div>
                 <div class="subquote">::Front-end web designs</div>
             </div>
-            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards textcard superbig">PLACE HOLDER</div>
+            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards textcard superbig">
+                PLACE HOLDER</div>
         </div>
         <!-- CONTACT -->
+        <div id="contact"></div>
+        <footer class="footer">
+            <div class="contact"></div>
+        </footer>
 
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script src="assets/js/lib/aosconfig.js" defer></script>
         <script src="assets/js/lib/smooth-scroll.js"></script>
         <script>
             var scroll = new SmoothScroll('a[href*="#"]', {
-                speed: 1000,
+                speed: 800,
             });
         </script>
         <script>

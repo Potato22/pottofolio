@@ -153,8 +153,9 @@
 @media screen and (max-width: 740px) {
   #hello,
 #fader,
-.forwardattrwrap {
-    display: none;
+.forwardattrwrap,
+.orbcursor {
+    display: none !important;
   }
 }
 .mainbox {
@@ -346,6 +347,17 @@ a.linkcard::before {
     grid-row: span 2/auto;
   }
 }
+@media screen and (max-width: 1090px) {
+  .dynamic-long-mediumwide {
+    grid-column: span 1/auto;
+    grid-row: span 1/auto;
+  }
+
+  .dynamic-mediumwide-long {
+    grid-column: span 1/auto;
+    grid-row: span 1/auto;
+  }
+}
 /*textcard--------------------------------*/
 .textcard {
   padding: 1rem;
@@ -422,7 +434,7 @@ a.linkcard::before {
 }
 @media screen and (max-width: 500px) {
   .titletextcard {
-    font-size: 0.5em;
+    font-size: 1.3em;
   }
 }
 /*textcard--------------------------------*/
