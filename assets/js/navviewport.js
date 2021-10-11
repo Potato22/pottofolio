@@ -1,7 +1,7 @@
 $(function () {
 
     var $win = $(window);
-    var winH = $win.height(); // Get the window height.
+    var winH = $win.height(); // window height
 
     $win.on("scroll", function () {
         if ($(this).scrollTop() > winH) {
@@ -11,8 +11,8 @@ $(function () {
             //console.log('navOn')
             $('.dynamicnav').addClass('navOff');
         }
-    }).on("resize", function () { // If the user resizes the window
-        winH = $(this).height(); // you'll need the new heigt value
+    }).on("resize", function () { // read window size change
+        winH = $(this).height(); // update height value
     });
 
 });
@@ -34,7 +34,7 @@ function chapter() {
     var create = $('#create').offset().top - $(window).scrollTop();
     var illus = $('#illus').offset().top - $(window).scrollTop();
     var anim = $('#anim').offset().top - $(window).scrollTop();
-    var web = $('#web').offset().top - $(window).scrollTop();
+    var sket = $('#sket').offset().top - $(window).scrollTop();
     
     
     var contact = $('#contact').offset().top - $(window).scrollTop();
@@ -45,7 +45,7 @@ function chapter() {
     var contactbool;
     var illusbool;
     var animbool;
-    var webbool;
+    var sketbool;
 
     if (about <= 0) {
         aboutbool = true;
@@ -74,12 +74,12 @@ function chapter() {
     } else {
         animbool = false;
     }
-    if (web <= 0) {
-        webbool = true;
+    if (sket <= 0) {
+        sketbool = true;
         animbool = false;
         //console.log("create active")
     } else {
-        webbool = false;
+        sketbool = false;
     }
 
     if (contact <= 0) {
@@ -89,7 +89,7 @@ function chapter() {
     } else {
         contactbool = false;
     }
-    console.log('creatbool', createbool, '\n illusbool', illusbool, '\n animbool', animbool, '\n webbool', webbool )
+    console.log('creatbool', createbool, '\n illusbool', illusbool, '\n animbool', animbool, '\n sketbool', sketbool )
 
     if (aboutbool == true) {
         $('.s1').addClass('activestrike')
@@ -114,7 +114,7 @@ function chapter() {
         $('.s2-2').removeClass('blockactive')
     }
 
-    if (webbool == true) {
+    if (sketbool == true) {
         $('.s2-3').addClass('blockactive')
     } else {
         $('.s2-3').removeClass('blockactive')

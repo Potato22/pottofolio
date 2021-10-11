@@ -11,7 +11,7 @@
 
 .hero {
   position: relative;
-  margin-right: 40%;
+  /*margin-right: 40%;*/
   color: var(--white);
 }
 
@@ -40,8 +40,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  filter: brightness(0.5);
 }
-
 .heroimage > div {
   width: 100%;
   height: 100%;
@@ -60,15 +60,12 @@
 .heroimage > div:nth-child(2) {
   animation-delay: 5s;
 }
-
 .heroimage > div:nth-child(3) {
   animation-delay: 10s;
 }
-
 .heroimage > div:nth-child(4) {
   animation-delay: 15s;
 }
-
 .heroimage > div:nth-child(5) {
   animation-delay: 20s;
 }
@@ -119,7 +116,7 @@
 
 .dot {
   background: var(--white);
-  --dotsize: 5px;
+  --dotsize:5px;
   width: var(--dotsize);
   height: var(--dotsize);
   border-radius: 50%;
@@ -151,10 +148,7 @@
 }
 
 @media screen and (max-width: 740px) {
-  #hello,
-#fader,
-.forwardattrwrap,
-.orbcursor {
+  #hello, #fader, .forwardattrwrap, .orbcursor {
     display: none !important;
   }
 }
@@ -335,6 +329,15 @@ a.linkcard::before {
   .widecardp {
     grid-column: span auto/auto;
   }
+
+  .mediumwidecard {
+    grid-column: span 1/auto;
+  }
+}
+@media screen and (max-width: 700px) {
+  .read {
+    grid-row: span 2/auto;
+  }
 }
 @media screen and (max-width: 1367px) {
   .dynamic-long-mediumwide {
@@ -348,12 +351,7 @@ a.linkcard::before {
   }
 }
 @media screen and (max-width: 1090px) {
-  .dynamic-long-mediumwide {
-    grid-column: span 1/auto;
-    grid-row: span 1/auto;
-  }
-
-  .dynamic-mediumwide-long {
+  .dynamic-long-mediumwide, .dynamic-mediumwide-long {
     grid-column: span 1/auto;
     grid-row: span 1/auto;
   }
@@ -399,7 +397,7 @@ a.linkcard::before {
 .longtextread {
   font-family: var(--content);
   line-height: 1.7;
-  font-size: 1.2em;
+  font-size: 1.15em;
 }
 
 .subquote {
@@ -524,5 +522,7 @@ a.linkcard::before {
   justify-content: flex-end;
   align-items: flex-end;
 }
+
+/*# sourceMappingURL=index-gallery.css.map */
 
 /*# sourceMappingURL=index-gallery.css.map */

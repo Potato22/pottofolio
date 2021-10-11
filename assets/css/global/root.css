@@ -269,6 +269,9 @@ a:link, a:visited {
   display: grid;
   place-items: center;
 }
+.xcont:hover .x, .xcont ::after {
+  width: 10px;
+}
 
 .x {
   position: absolute;
@@ -276,6 +279,7 @@ a:link, a:visited {
   width: 4px;
   transform: rotate(45deg);
   height: 40px;
+  transition: 0.2s var(--sleek);
 }
 .x::after {
   content: "";
