@@ -49,8 +49,9 @@
 
 <body>
     <!-- loader -->
-    <div class="loader">
-        <div class="loaderanim"></div>
+    <div class="loadblock">
+        <div class="outer"></div>
+        <div class="inner"></div>
     </div>
     <!-- orb cursor -->
     <div class="orbcursor"></div>
@@ -65,17 +66,19 @@
     </div>
     <div id="hello">
         <div class="heroimage">
-            <div style="background-image:url(assets/img/content/cityscape.png)"></div>
-            <div style="background-image:url(assets/img/content/clock.png)"></div>
+            <div style="background-image:url(assets/img/content/train.png)"></div>
+            <div style="background-image:url(assets/img/content/road.png)"></div>
             <div class="offsetbuttom" style="background-image:url(assets/img/content/lighting.png)"></div>
             <div style="background-image:url(assets/img/content/log.png)"></div>
             <div style="background-image:url(assets/img/content/snow.png)"></div>
         </div>
         <div class="hero">
-            <div class="theactualhello" data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right">Potto</div>
+            <div class="theactualhello" data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right">Potto
+            </div>
             <!-- <div class="dialogue" data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right"
                 data-aos-delay="100">Sheridan</div> -->
-            <div class="uh" data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right" data-aos-delay="200">Visual Development - Concept Artist</div>
+            <div class="uh" data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right" data-aos-delay="200">
+                Visual Development - Concept Artist</div>
         </div>
     </div>
     <!-- forward -->
@@ -141,73 +144,110 @@
             </a>
         </div>
     </nav>
-    <div class="mainbox">
-        <!-- CARDGRID -->
-        <div id="about" class="anchor"></div>
-        <div class="cardgrid">
-            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
-                class="cards imgcard dynamic-long-mediumwide">
-                <img class="imgs" src="assets/img/content/imgweb.png">
-            </div>
-            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right"
-                class="cards invis textcard mediumwidecard longtext">
-                <div class="titletextcard">VisDev,</div>
-                <div class="titletextcard">Environment Artist</div>
-                <!-- <div class="titletextcard">FRONT-END sket,</div>
-                <div class="longtext">you call it, I got your back.</div> -->
-            </div>
-            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-left"
-                class="cards textcard invis longtextread">
-                Being a <b>Visual Development Artist</b> is to create visual images that finds the visual identity of a project, cooperate with other departments and the Art Director to tell a story through visual illustration. Such as <b>Color</b>, <b>Light</b>, <b>Composition</b> and <b>Design.</b>
-            </div>
-            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-left"
-                class="cards mediumwidecard textcard invis longtextread read">
-                Halo!<br>
-                I'm Ilham, an Indonesian VDA (Visual Development Artist) and a Concept Artist based in Jakarta, Indonesia. <br><br>
-                I grew up surrounded by colorful pastel ponies and vast variety of communities that develop my love towards artistic taste in environment illusttrations and concepts arts which got me into a Digital Creative Media course and studying into [[PLACEHOLDER]]<br>
-
-            </div>
-            <a href="#contact" class="cards linkcard" data-aos-duration="500" data-aos-easing="sleek"
-                data-aos="fade-right">
-                <div style="color: var(--textD);" class="textcard invis bigger col">
-                    <b>Let's Talk!</b>
-                    <svg class="customarrow" viewBox="0 0 10 10">
-                        <g>
-                            <path class="line" d="M0 5h7"></path>
-                            <path class="arrow" d="M1 1l4 4-4 4"></path>
-                        </g>
-                    </svg>
+    <div class="mainboxfloater">
+        <div class="mainbox">
+            <!-- CARDGRID -->
+            <div id="about" class="anchor"></div>
+            <div class="cardgrid">
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
+                    class="cards dynamic-long-mediumwide">
+                    <img class="imgs" src="assets/img/content/imgweb.png">
                 </div>
-            </a>
-            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards imgcard widecard">
-                <img class="imgs" src="assets/img/content/snow.png">
-            </div>
-            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-left"
-                class="cards textcard invis longtextread">
-                I'm young as shit i don't know what to put here that will essentially impress clients. I don't think I'm supposed to make portfolio page this early I barely know anything
-            </div>
-        </div>
-        <!-- CARDGRID -->
-        <div id="create"></div>
-        <div id="illus"></div>
-        <div class="cardgrid">
-            <div class="cards invis textcard widecard">
-                <del>Less talk,</del><br>
-                <div class="titletextcard">More creations!</div>
-                <div class="subquote">::Illustration works</div>
-            </div>
-            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards imgcard">
-                <img class="imgs" src="assets/img/content/log.png">
-            </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right"
+                    class="cards invis textcard mediumwidecard longtext">
+                    <div class="titletextcard bigger">POTTO</div>
+                    <div class="titletextcard big">VisDev,</div>
+                    <div class="titletextcard big">Environment Artist</div>
+                    <!-- <div class="titletextcard">FRONT-END sket,</div>
+                <div class="longtext">you call it, I got your back.</div> -->
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-left"
+                    class="cards textcard dynamic-mediumwide-long invis longtextread">
+                    "Being a <b>Visual Development Artist</b> is to create visual images that pours out raw emotion into
+                    something in a way that you can't verbally describe."
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards extralongcard ghost">
+                    <img class="imgs" src="assets/img/content/dance.png">
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-left"
+                    class="cards mediumwidecard textcard invis longtextread read">
+                    Halo!<br>
+                    I'm Ilham, an Indonesian VDA (Visual Development Artist) and a Concept Artist based in Jakarta,
+                    Indonesia. <br><br>
+                    I grew up surrounded by colorful pastel ponies and vast variety of communities that develop my love
+                    towards artistic taste in environment illustrations and concepts arts which got me into a Digital
+                    Creative Media course and studying into [[PLACEHOLDER]]<br>
 
-            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
-                class="cards imgcard dynamic-long-mediumwide">
-                <img class="imgs bottomoffset" src="assets/img/content/lighting.png">
+                </div>
+                <a href="#contact" class="cards linkcard" data-aos-duration="500" data-aos-easing="sleek"
+                    data-aos="fade-right">
+                    <div style="color: var(--textD);" class="textcard invis bigger col">
+                        <b>Let's Talk!</b>
+                        <svg class="customarrow" viewBox="0 0 10 10">
+                            <g>
+                                <path class="line" d="M0 5h7"></path>
+                                <path class="arrow" d="M1 1l4 4-4 4"></path>
+                            </g>
+                        </svg>
+                    </div>
+                </a>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards widecard">
+                    <img class="imgs" src="assets/img/content/snow.png">
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right"
+                    class="cards invis textcard widecard longtext">
+                    <div class="titletextcard bigger">Work Experience</div>
+                    <!-- <div class="titletextcard">FRONT-END sket,</div>
+                <div class="longtext">you call it, I got your back.</div> -->
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-left"
+                    class="cards textcard invis longtextread">
+                    <div class="titletextcard longtext">Place holder</div>
+                    No one hired me lol. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, repudiandae sed,
+                    modi non culpa similique quo officiis consequuntur perferendis dolores soluta odio sunt ullam
+                    adipisci
+                    dolorem. Saepe, debitis!
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-left"
+                    class="cards textcard invis longtextread">
+                    <div class="titletextcard longtext">Place holder</div>
+                    No one hired me lol. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, repudiandae sed,
+                    modi non culpa similique quo officiis consequuntur perferendis dolores soluta odio sunt ullam
+                    adipisci
+                    dolorem. Saepe, debitis!
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-left"
+                    class="cards textcard invis longtextread">
+                    <div class="titletextcard longtext">Place holder</div>
+                    No one hired me lol. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, repudiandae sed,
+                    modi non culpa similique quo officiis consequuntur perferendis dolores soluta odio sunt ullam
+                    adipisci
+                    dolorem. Saepe, debitis!
+                </div>
             </div>
-            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
-                class="cards backgroundtext bigcard">
-                <img class="imgs" src="assets/img/content/snow.png">
-                <div class="textcontainer">
+            <!-- CARDGRID -->
+            <div id="create"></div>
+            <div id="illus"></div>
+            <div class="cardgrid">
+                <div class="cards invis textcard widecard">
+                    <del>Less talk,</del><br>
+                    <div class="titletextcard">More creations!</div>
+                    <div class="subquote">::Illustration works</div>
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
+                    class="cards dynamicUpscale-small-mediumwide">
+                    <img class="imgs" src="assets/img/content/log.png">
+                </div>
+
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards mediumwidecard">
+                    <img class="imgs bottomoffset" src="assets/img/content/lighting.png">
+                </div>
+
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
+                    class="cards backgroundtext widecard">
+                    <img class="imgs" src="assets/img/content/snow.png">
+                    <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
+                    <!-- <div class="textcontainer"> 
                     <div class="textgroup">
                         <div class="imgtext">Look more into my Illustration gallery
                         </div>
@@ -224,37 +264,29 @@
                             </a>
                         </div>
                     </div>
+                </div> -->
                 </div>
-            </div>
 
-            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards imgcard">
-                <img class="imgs" src="assets/img/content/dance.png">
-            </div>
-            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards imgcard">
-                <img class="imgs" src="assets/img/content/verticalscape.png">
-            </div>
-            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
-                class="cards mediumwidecard widecard">
-                <img class="imgs" src="assets/img/content/clock.png">
-            </div>
-            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
-                class="cards backgroundtext bigcard">
-                <img class="imgs leftoffset" src="assets/img/content/cityscape.png">
-                <div class="textcontainer">
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards">
+                    <img class="imgs" src="assets/img/content/dance.png">
+                </div>
+
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
+                    class="cards backgroundtext bigcard">
+                    <img class="imgs leftoffset" src="assets/img/content/cityscape.png">
+                    <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
+                    <!-- <div class="textcontainer">
                     <div class="textgroup">
                         <div data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right"
                             class="cards invis textcard longtext">
-                            Capture the mood.
+                            Image Alt
                         </div>
                     </div>
+                </div> -->
                 </div>
-            </div>
-            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards textcard big">
-                Capable of capturing your vision into reality
-            </div>
 
 
-            <!-- <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext longcard">
+                <!-- <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext longcard">
                 <img class="imgs" src="assets/img/content/img8.png">
                 <div class="textcontainer">
                     <div class="textgroup">
@@ -264,49 +296,53 @@
                     </div>
                 </div>
             </div> -->
-        </div>
-        <!-- CARDGRID -->
-        <div id="anim"></div>
-        <div class="cardgrid">
-            <div class="cards invis textcard widecard">
-                <div class="titletextcard">Groovy Animation</div>
-                <div class="subquote">::Animation works</div>
             </div>
-            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards textcard superbig">
-                PLACE HOLDER</div>
-        </div>
-        <!-- CARDGRID -->
-        <div id="sket"></div>
-        <div class="cardgrid">
-            <div class="cards invis textcard widecard">
-                <div class="titletextcard">Nerd stuff</div>
-                <div class="subquote">::Front-end sket designs</div>
+            <!-- CARDGRID -->
+            <div id="anim"></div>
+            <div class="cardgrid">
+                <div class="cards invis textcard widecard">
+                    <div class="titletextcard">Groovy Animation</div>
+                    <div class="subquote">::Animation works</div>
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
+                    class="cards textcard superbig">
+                    PLACE HOLDER</div>
             </div>
-            <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards textcard superbig">
-                PLACE HOLDER</div>
-        </div>
-        <!-- CONTACT -->
-        <div id="contact"></div>
-        <footer class="footer">
-            <div class="contact"></div>
-        </footer>
+            <!-- CARDGRID -->
+            <div id="sket"></div>
+            <div class="cardgrid">
+                <div class="cards invis textcard widecard">
+                    <div class="titletextcard">Nerd stuff</div>
+                    <div class="subquote">::Front-end sket designs</div>
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
+                    class="cards textcard superbig">
+                    PLACE HOLDER</div>
+            </div>
+            <!-- CONTACT -->
+            <div id="contact"></div>
+            <footer class="footer">
+                <div class="contact"></div>
+            </footer>
 
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script src="assets/js/lib/aosconfig.js" defer></script>
-        <script src="assets/js/lib/smooth-scroll.js"></script>
-        <script>
-            var scroll = new SmoothScroll('a[href*="#"]', {
-                speed: 800,
-            });
-        </script>
-        <script>
-            $(document).ready(function () {
-                $(".loader").fadeOut('fast');
-            })
-        </script>
-        <script defer>
-            AOS.init();
-        </script>
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script src="assets/js/lib/aosconfig.js" defer></script>
+            <script src="assets/js/lib/smooth-scroll.js"></script>
+            <script>
+                var scroll = new SmoothScroll('a[href*="#"]', {
+                    speed: 800,
+                });
+            </script>
+            <script>
+                $(document).ready(function () {
+                    $(".loadblock").fadeOut('fast');
+                })
+            </script>
+            <script defer>
+                AOS.init();
+            </script>
+        </div>
+    </div>
 </body>
 
 </html>

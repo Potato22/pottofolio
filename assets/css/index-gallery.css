@@ -152,6 +152,10 @@
     display: none !important;
   }
 }
+.mainboxfloater {
+  display: flex;
+  justify-content: center;
+}
 .mainbox {
   background: var(--baseD);
   padding: 2rem 6rem;
@@ -159,6 +163,7 @@
   flex-direction: column;
   align-items: center;
   transition: background 1s var(--sleek);
+  max-width: 1920px;
 }
 
 @media screen and (max-width: 800px) {
@@ -291,6 +296,15 @@ a.linkcard::before {
   grid-column: span 2/auto;
 }
 
+.ghost {
+  display: none;
+}
+
+.dynamicUpscale-small-mediumwide {
+  grid-row: span 1/auto;
+  grid-column: span 1/auto;
+}
+
 .dynamic-long-mediumwide {
   grid-row: span 2/auto;
 }
@@ -339,6 +353,15 @@ a.linkcard::before {
     grid-row: span 2/auto;
   }
 }
+@media screen and (min-width: 1785px) {
+  .dynamicUpscale-small-mediumwide {
+    grid-row: span 1/auto;
+    grid-column: span 2/auto;
+  }
+  .ghost {
+    display: block;
+  }
+}
 @media screen and (max-width: 1367px) {
   .dynamic-long-mediumwide {
     grid-column: span 2/auto;
@@ -380,7 +403,7 @@ a.linkcard::before {
 .bigger {
   font-size: 3.6em;
   font-family: var(--display);
-  font-weight: 500;
+  font-weight: 900;
 }
 
 .huge {

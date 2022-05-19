@@ -8,6 +8,13 @@ body {
   overflow-x: hidden;
   user-select: none !important;
 }
+
+/* ############################### */
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+/* ############################### */
+
 body[data-aos-easing=sleek] [data-aos] {
   transition-timing-function: var(--sleek);
 }
@@ -461,7 +468,64 @@ a:link, a:visited {
   color: var(--textD);
 }
 
-.loader {
+.loadblock {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  background: var(--baseD) ;
+  position: fixed;
+}
+
+.outer {
+  width: 70px;
+  height: 70px;
+  /*border: black 2px;*/
+  border-radius: 50%;
+  animation: spinouter 2s cubic-bezier(.08,.22,0,.99) infinite;
+  transition: border 0.2s cubic-bezier(.66,.02,.88,.32);
+  border-color: rgba(0, 0, 0, 0);
+  
+}
+
+.inner {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border-radius: 50%;
+  animation: spinouter 2s cubic-bezier(.08,.22,0,.99) 1.5s infinite;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+@keyframes spinouter {
+  0% {
+    transform: rotate(0deg);
+    border: solid var(--accentD) 4px;
+  }
+  25% {
+    transform: rotate(90deg);
+    border: solid var(--blackfL) 20px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border: solid var(--blackfL) 10px;
+    border-radius: 0px;
+  }
+  75% {
+    transform: rotate(270deg);
+    border: solid var(--blackfL) 30px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border: solid var(--blackfL) 4px;
+  }
+}
+
+
+
+/* .loader {
   position: fixed;
   background: var(--baseD);
   width: 100%;
@@ -480,7 +544,7 @@ a:link, a:visited {
   background-repeat: no-repeat;
   width: 200px;
   height: 50px;
-}
+} */
 
 .initialloc {
   position: absolute;
