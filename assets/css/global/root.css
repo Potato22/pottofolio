@@ -13,8 +13,8 @@ body {
 *, ::after, ::before {
   box-sizing: border-box;
 }
-/* ############################### */
 
+/* ############################### */
 body[data-aos-easing=sleek] [data-aos] {
   transition-timing-function: var(--sleek);
 }
@@ -55,60 +55,60 @@ body::-webkit-scrollbar-thumb:active {
   font-weight: 1 1000;
 }
 :root {
-  --baseD: rgb(24, 24, 24);
-  --baseL: rgba(252, 242, 233, 1);
-  --alphabaseD: rgba(24, 24, 24, 0.7);
-  --alphabaseL: rgba(252, 242, 233, 0.7);
-  --basesecondaryD: rgb(44, 44, 44);
-  --basesecondaryL: rgb(199, 194, 189);
-  --textD: rgb(255, 255, 255);
-  --textL: rgb(19, 19, 19);
-  --textsecondaryD: rgb(202, 202, 202);
-  --textsecondaryL: rgb(40, 40, 40);
-  --accentD: rgb(90, 171, 224);
-  --accentL: rgb(252, 193, 125);
-  --accentsecondaryD: rgb(191, 228, 255);
-  --accentsecondaryL: rgb(255, 220, 191);
-  --accentfillD: rgb(29, 31, 32);
-  --accentfillL: rgb(255, 252, 250);
-  --textaccentD: rgb(94, 186, 255);
-  --textaccentL: rgb(255, 167, 94);
-  --black: black;
-  --blackfL: white;
-  --blacktD: black;
-  --white: white;
-  --textfL: rgb(19, 19, 19);
-  --texttD: rgb(255, 255, 255);
-  --basefL: rgb(252, 242, 233);
-  --basetD: rgb(24, 24, 24);
-  --boxshadowD: rgba(0, 0, 0, 0) 0 0 0px;
-  --boxshadowL: rgba(0, 0, 0, 0.25) 0 2px 12px;
-  --loaderD: url("../../img/local/spinnerD.gif");
-  --loaderL: url("../../img/local/spinnerL.gif");
-  --display: Syne;
-  --content: Inter;
-  --contentsecondary: JetBrains Mono;
-  --sleek: cubic-bezier(0.03, 0.77, 0.34, 1);
-  --accel: cubic-bezier(0.72, 0.06, 0.96, 0.57);
-  --anchorhead: cubic-bezier(0.24, 0.01, 0.01, 1);
+  --baseD:rgb(24, 24, 24);
+  --baseL:rgba(252, 242, 233, 1);
+  --alphabaseD:rgba(24, 24, 24, 0.7);
+  --alphabaseL:rgba(252, 242, 233, 0.7);
+  --basesecondaryD:rgb(44, 44, 44);
+  --basesecondaryL:rgb(199, 194, 189);
+  --textD:rgb(255, 255, 255);
+  --textL:rgb(19, 19, 19);
+  --textsecondaryD:rgb(202, 202, 202);
+  --textsecondaryL:rgb(40, 40, 40);
+  --accentD:rgb(90, 171, 224);
+  --accentL:rgb(252, 193, 125);
+  --accentsecondaryD:rgb(191, 228, 255);
+  --accentsecondaryL:rgb(255, 220, 191);
+  --accentfillD:rgb(29, 31, 32);
+  --accentfillL:rgb(255, 252, 250);
+  --textaccentD:rgb(94, 186, 255);
+  --textaccentL:rgb(255, 167, 94);
+  --black:black;
+  --blackfL:white;
+  --blacktD:black;
+  --white:white;
+  --textfL:rgb(19, 19, 19);
+  --texttD:rgb(255, 255, 255);
+  --basefL:rgb(252, 242, 233);
+  --basetD:rgb(24, 24, 24);
+  --boxshadowD:rgba(0, 0, 0, 0) 0 0 0px;
+  --boxshadowL:rgba(0, 0, 0, 0.25) 0 2px 12px;
+  --loaderD:url("../../img/local/spinnerD.gif");
+  --loaderL:url("../../img/local/spinnerL.gif");
+  --display:Syne;
+  --content:Inter;
+  --contentsecondary:JetBrains Mono;
+  --sleek:cubic-bezier(0.03, 0.77, 0.34, 1);
+  --accel:cubic-bezier(0.72, 0.06, 0.96, 0.57);
+  --anchorhead:cubic-bezier(0.24, 0.01, 0.01, 1);
 }
 
 [data-theme=light] {
-  --baseD: var(--baseL);
-  --alphabaseD: var(--alphabaseL);
-  --basesecondaryD: var(--basesecondaryL);
-  --textD: var(--textL);
-  --textsecondaryD: var(--textsecondaryL);
-  --accentD: var(--accentL);
-  --accentsecondaryD: var(--accentsecondaryL);
-  --accentfillD: var(--accentfillL);
-  --textaccentD: var(--textaccentL);
-  --blackfL: var(--blacktD);
-  --black: var(--white);
-  --textfL: var(--texttD);
-  --basefL: var(--basetD);
-  --boxshadowD: var(--boxshadowL);
-  --loaderD: var(--loaderL);
+  --baseD:var(--baseL);
+  --alphabaseD:var(--alphabaseL);
+  --basesecondaryD:var(--basesecondaryL);
+  --textD:var(--textL);
+  --textsecondaryD:var(--textsecondaryL);
+  --accentD:var(--accentL);
+  --accentsecondaryD:var(--accentsecondaryL);
+  --accentfillD:var(--accentfillL);
+  --textaccentD:var(--textaccentL);
+  --blackfL:var(--blacktD);
+  --black:var(--white);
+  --textfL:var(--texttD);
+  --basefL:var(--basetD);
+  --boxshadowD:var(--boxshadowL);
+  --loaderD:var(--loaderL);
 }
 
 a {
@@ -326,8 +326,7 @@ a:link, a:visited {
   opacity: 0;
 }
 
-.arrow,
-.line {
+.arrow, .line {
   transition: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -396,7 +395,7 @@ a:link, a:visited {
 
 .togglecont {
   position: relative;
-  --borderwidth: 2.6px;
+  --borderwidth:2.6px;
   border-top: solid var(--borderwidth) var(--textD);
   border-right: solid var(--borderwidth) var(--textD);
   width: 30px;
@@ -425,7 +424,7 @@ a:link, a:visited {
 
 .splash {
   position: absolute;
-  --circle: 200px;
+  --circle:200px;
   width: var(--circle);
   height: var(--circle);
   transform: scale(0);
@@ -475,7 +474,7 @@ a:link, a:visited {
   justify-content: center;
   align-items: center;
   z-index: 200;
-  background: var(--baseD) ;
+  background: var(--baseD);
   position: fixed;
 }
 
@@ -484,10 +483,9 @@ a:link, a:visited {
   height: 70px;
   /*border: black 2px;*/
   border-radius: 50%;
-  animation: spinouter 2s cubic-bezier(.08,.22,0,.99) infinite;
-  transition: border 0.2s cubic-bezier(.66,.02,.88,.32);
+  animation: spinouter 2s cubic-bezier(0.08, 0.22, 0, 0.99) infinite;
+  transition: border 0.2s cubic-bezier(0.66, 0.02, 0.88, 0.32);
   border-color: rgba(0, 0, 0, 0);
-  
 }
 
 .inner {
@@ -495,7 +493,7 @@ a:link, a:visited {
   height: 30px;
   position: absolute;
   border-radius: 50%;
-  animation: spinouter 2s cubic-bezier(.08,.22,0,.99) 1.5s infinite;
+  animation: spinouter 2s cubic-bezier(0.08, 0.22, 0, 0.99) 1.5s infinite;
   border-color: rgba(0, 0, 0, 0);
 }
 
@@ -522,9 +520,6 @@ a:link, a:visited {
     border: solid var(--blackfL) 4px;
   }
 }
-
-
-
 /* .loader {
   position: fixed;
   background: var(--baseD);
@@ -545,7 +540,6 @@ a:link, a:visited {
   width: 200px;
   height: 50px;
 } */
-
 .initialloc {
   position: absolute;
   display: flex;
@@ -556,7 +550,7 @@ a:link, a:visited {
 .orbcursor {
   display: none;
   position: fixed;
-  --orbsize: 10px;
+  --orbsize:10px;
   width: var(--orbsize);
   height: var(--orbsize);
   background: white;
@@ -616,6 +610,7 @@ a:link, a:visited {
     transform: scale(1) translate(calc(var(--orbsize)/-2), calc(var(--orbsize)/-2));
   }
 }
+/*# sourceMappingURL=root.css.map */
 /*# sourceMappingURL=root.css.map */
 
 /*# sourceMappingURL=root.css.map */
