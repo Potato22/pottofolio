@@ -156,6 +156,7 @@
   display: flex;
   justify-content: center;
 }
+
 .mainbox {
   background: var(--baseD);
   padding: 2rem 6rem;
@@ -358,6 +359,7 @@ a.linkcard::before {
     grid-row: span 1/auto;
     grid-column: span 2/auto;
   }
+
   .ghost {
     display: block;
   }
@@ -546,6 +548,7 @@ a.linkcard::before {
   align-items: flex-end;
 }
 
+/*# sourceMappingURL=index-gallery.css.map */
 /*# sourceMappingURL=index-gallery.css.map */
 
 /*# sourceMappingURL=index-gallery.css.map */
