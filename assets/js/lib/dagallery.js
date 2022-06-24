@@ -32,6 +32,9 @@
                 fragment.append(img)
             }
             element.replaceChildren(fragment)
+            //send "loaded" state to zoomtrigger.js
+            element.dispatchEvent(new CustomEvent("galleryLoaded"))
+            $(".loadblock").fadeOut('fast');
         })
     }
 
@@ -44,4 +47,3 @@
     })
 
 })()
-$(".loadblock").fadeOut('fast');

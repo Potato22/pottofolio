@@ -1,4 +1,4 @@
-document.getElementById("daImg").addEventListener("finish", (function (e) {
+document.getElementById("daImg").addEventListener("galleryLoaded", (function (e) {
     console.log('ready')
     $(".imgs").click((function () {
         $(".zoomincontent").attr("src", $(this).attr("src")), $(".zoomindimmer").fadeIn(200), $(".zoomin").show(), $(".dynamicnav").addClass("navHide")
