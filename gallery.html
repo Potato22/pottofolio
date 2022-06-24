@@ -82,23 +82,10 @@
                 Illustration Work
             </div>
         </div>
-        <div class="cardgrid" id="daImg">
-            <!--script injects here-->
+        <div class="cardgrid" id="daImg" data-da-gallery="Potato2292/78916640">
         </div>
     </div>
-
-    <script src="assets/js/lib/deviantART-gallery-plugin.min.js"></script>
-    <script>
-        getDeviations('https://backend.deviantart.com/rss.xml?q=gallery:Potato2292/78916640', null, 0);
-        function processDeviations(deviations) {
-            for (var i = 0, l = deviations.length; i < l; i++) {
-                console.log(deviations[i].title);
-                console.log(deviations[i].link);
-                console.log(deviations[i].image);
-            }
-            console.log('UPDATED')
-        }
-    </script>
+    <script src="assets/js/lib/dagallery.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="assets/js/lib/aosconfig.js" defer></script>
     <script src="assets/js/zoomtrigger.js"></script>
